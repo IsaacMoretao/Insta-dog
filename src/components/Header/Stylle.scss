@@ -1,0 +1,30 @@
+.Header{
+  height: 70px;
+  width: 100%;
+  border-bottom: 1px solid gray;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  button{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    background: transparent;
+    border: none;
+    padding: 3px 15px;
+
+    cursor: pointer;
+    transition: 0.3s;
+
+  }
+
+  button:hover{
+    border-radius: 100px;
+    background: #efefef7e;
+    box-shadow: 3px 3px 3px #00000036;
+  }
+
+}
