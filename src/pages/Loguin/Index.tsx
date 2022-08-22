@@ -1,5 +1,5 @@
 
-import { Loguins } from './../../components/Loguin/Index';
+import { Loguins } from '../../components/Loguin/Index';
 export function Loguin(){
 
   return(

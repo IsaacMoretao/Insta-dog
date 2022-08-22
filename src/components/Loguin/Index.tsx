@@ -1,18 +1,23 @@
 
 import { useState } from 'react';
+import { Input } from '../subComponents/Input/Index';
+import { Button } from '../subComponents/Button/Index';
+import useForm from '../../Hooks/useForm';
+
 export function Loguins(){
 
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
+  const username = useForm();
+  const password = useForm();
 
   function handleSubmit(event: any) {
+
     event.preventDefault();
     fetch('https://dogsapi.origamid.dev/json/jwt-auth/v1/token', {
       method: 'POST',
       headers: {
         'content-Type': 'application/json'
       },
-      body: JSON.stringify({ username, password})
+      body: JSON.stringify('')
     }).then((Response) => {
       console.log(Response);
       return Response.json();
@@ -25,17 +30,23 @@ export function Loguins(){
 
     <div>
       <form action="" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={username}
-          onChange={({target}) => setUsername (target.value)}
+        <Input
+          label={'Usuário'}
+          type={'password'}
+          name={'Usename'}
+          {...username}
         />
-        <input
-          type="text"
-          value={password}
-          onChange={({target}) => setPassword (target.value)}
+
+        <Input
+          label={'Senha'}
+          type={'password'}
+          name={'password'}
+          {...password}
         />
-        <button>Entrar</button>
+
+        <Button>
+          lasdfjh
+        </Button>
       </form>
     </div>
   )
