@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Input } from '../subComponents/Input/Index';
 import { Button } from '../subComponents/Button/Index';
@@ -9,7 +8,7 @@ export function Loguins(){
   const username = useForm();
   const password = useForm();
 
-  function handleSubmit(event: any) {
+  function handleSubmit(event) {
 
     event.preventDefault();
     fetch('https://dogsapi.origamid.dev/json/jwt-auth/v1/token', {

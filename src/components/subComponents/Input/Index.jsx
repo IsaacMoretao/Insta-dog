@@ -1,18 +1,10 @@
 import './Stylle.scss';
 
-import { useForm } from './../../../Hooks/useForm';
-import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from 'react';
 
-type InputType = {
-  label: string,
-  type: string,
-  name: string,
-  value: any,
-  
 
-}
 
-export function Input(props: InputType, { onChange, error, onBlur }:any){
+
+export function Input( {label, type, name, value, onChange, error, onBlur }){
   return(
     <div className='bodyInput'>
 

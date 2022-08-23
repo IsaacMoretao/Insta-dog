@@ -1,8 +1,6 @@
 import React from "react";
 
-
-
-const types: any = {
+const types = {
 
   email: {
     regex:  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
@@ -12,11 +10,11 @@ const types: any = {
 
 }
 
-export function useForm (type: string | boolean | any) {
+export function useForm (type) {
   const [value, setValue] = React.useState('');
-  const [error, setError] = React.useState<any>(null);
+  const [error, setError] = React.useState(null);
 
-  function validate(value: string) {
+  function validate(value) {
 
     if(type === false) return true;
 
@@ -34,7 +32,7 @@ export function useForm (type: string | boolean | any) {
 
   }
 
-  function onChange({ target }:any ) {
+  function onChange({ target } ) {
     setValue(target.value);
   }
 

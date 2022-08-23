@@ -1,7 +1,7 @@
 
-import './Stylle.scss'
+import './Stylle.scss';
 
-export function Button(  { children, ...props }:any){
+export function Button({ children, ...props }){
   return(
     <>
 
