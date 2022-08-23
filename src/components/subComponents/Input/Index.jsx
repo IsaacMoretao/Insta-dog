@@ -1,19 +1,15 @@
 import './Stylle.scss';
 
-
-
-
-
-export function Input( {label, type, name, value, onChange, error, onBlur }){
+export function Input( {type, name, value, onChange, error, onBlur }){
   return(
     <div className='bodyInput'>
 
-      <label htmlFor={props.name}>{props.name}</label>
+      <label htmlFor={name}>{name}</label>
 
       <input
-        id={props.name}
-        type={props.type}
-        value={props.value}
+        id={name}
+        type={type}
+        value={value}
         onChange={onChange}
         onBlur={onBlur}
 

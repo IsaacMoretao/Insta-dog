@@ -1,28 +1,48 @@
-import { useState } from 'react';
 import { Input } from '../subComponents/Input/Index';
 import { Button } from '../subComponents/Button/Index';
 import useForm from '../../Hooks/useForm';
 
-export function Loguins(){
+import { TOKEN_POST, USER_GET } from '../../api';
+import { react } from '@vitejs/plugin-react';
 
+
+export function Loguins(){
   const username = useForm();
   const password = useForm();
 
-  function handleSubmit(event) {
+  react.UseEffact(() =>{
+    const token = window.localStorage.getItem('token');
+    if(token) {
+      getUser();
+    }
 
+  }, [])
+
+  async function getUser(token) {
+
+    const {url, options} = USER_GET(token);
+    const response = fetch(url, options)
+    const json = await response.json();
+    console.log(json)
+
+  }
+
+  async function handleSubmit(event) {
     event.preventDefault();
-    fetch('https://dogsapi.origamid.dev/json/jwt-auth/v1/token', {
-      method: 'POST',
-      headers: {
-        'content-Type': 'application/json'
-      },
-      body: JSON.stringify('')
-    }).then((Response) => {
-      console.log(Response);
-      return Response.json();
-    }).then(json => {
-      console.log(json)
-    })
+
+    if(username.validate() && password.validate()){
+      const { url, Options } = TOKEN_POST({
+        username: username.value,
+        password: password.value,
+      });
+
+      const response = await fetch(url, Options);
+      const json = await response.json();
+      window.localStorage.setItem('token', json.token);
+      getUser(json.token)
+
+    }
+
   }
 
   return(
@@ -44,7 +64,7 @@ export function Loguins(){
         />
 
         <Button>
-          lasdfjh
+          Enviar
         </Button>
       </form>
     </div>
