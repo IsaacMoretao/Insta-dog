@@ -1,53 +1,29 @@
+import React from 'react';
+import { useForm } from '../../Hooks/useForm';
 import { Input } from '../subComponents/Input/Index';
 import { Button } from '../subComponents/Button/Index';
-import useForm from '../../Hooks/useForm';
-
-import { TOKEN_POST, USER_GET } from '../../api';
-import { react } from '@vitejs/plugin-react';
+import { UserContext } from '../../useContext';
+import { Header } from './../Header/Index';
 
 
 export function Loguins(){
   const username = useForm();
   const password = useForm();
 
-  react.UseEffact(() =>{
-    const token = window.localStorage.getItem('token');
-    if(token) {
-      getUser();
-    }
-
-  }, [])
-
-  async function getUser(token) {
-
-    const {url, options} = USER_GET(token);
-    const response = fetch(url, options)
-    const json = await response.json();
-    console.log(json)
-
-  }
+  const { userLogin, error, loading } = React.useContext(UserContext);
 
   async function handleSubmit(event) {
     event.preventDefault();
 
-    if(username.validate() && password.validate()){
-      const { url, Options } = TOKEN_POST({
-        username: username.value,
-        password: password.value,
-      });
-
-      const response = await fetch(url, Options);
-      const json = await response.json();
-      window.localStorage.setItem('token', json.token);
-      getUser(json.token)
-
+    if (username.validate() && password.validate()) {
+      userLogin(username.value, password.value);
     }
-
   }
 
   return(
 
     <div>
+      <Header/>
       <form action="" onSubmit={handleSubmit}>
         <Input
           label={'Usuário'}
@@ -63,9 +39,14 @@ export function Loguins(){
           {...password}
         />
 
-        <Button>
-          Enviar
-        </Button>
+        {loading ? (
+          <Button disabled>Carregando...</Button>
+        ):(
+          <Button>Enviar</Button>
+        )}
+
+
+        {error && <p>{error}</p>}
       </form>
     </div>
   )
