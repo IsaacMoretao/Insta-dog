@@ -1,0 +1,90 @@
+.Loguins {
+  width: 100%;
+  padding: 10%;
+  animation: Animation 0.2s;
+
+  form {
+    margin-bottom: 50px;
+
+    span {
+      width: 150px;
+      font-size: 40px;
+      font-family: 'fantasy';
+
+      font-weight: 900;
+      color: #0040ff;
+      z-index: 30;
+
+      b {
+        font-size: 40px;
+        font-family: 'fantasy';
+        font-weight: 900;
+
+        color: #fdfdff00;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #2f00ff43;
+
+        position: absolute;
+        margin-left: -95px;
+        margin-top: -3px;
+
+        z-index: -1;
+
+      }
+
+      b:first-child {
+        margin-left: -92px;
+        margin-top: -5px;
+      }
+
+    }
+
+  }
+
+}
+
+.subForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  span {
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+    z-index: 10;
+
+    div {
+      height: 8px;
+      width: 50px;
+      background: #00208277;
+
+      position: absolute;
+      margin-top: 35px;
+      z-index: -1;
+
+      border-radius: 90px;
+    }
+
+  }
+  
+
+}
+
+
+
+@keyframes Animation {
+
+  from {
+    padding-left: 0%;
+    padding-right: 20%;
+
+  }
+
+  to {
+    padding-left: 10%;
+    padding-right: 10%;
+
+  }
+
+}

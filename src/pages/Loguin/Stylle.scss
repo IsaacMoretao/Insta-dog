@@ -1,0 +1,15 @@
+.Loguin{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  figure{
+    display: flex;
+    background: url('../../assets/ImageFromLogin.jpg') no-repeat center center;
+    background-size: cover;
+    min-width: 45%;
+    height: 120vh;
+
+  }
+}

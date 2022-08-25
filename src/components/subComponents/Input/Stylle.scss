@@ -4,7 +4,7 @@
   input{
     border: 1px solid #eeeeee;
     display: block;
-    width: 100%;
+    width: 450px;
     padding: 0.8rem;
     border-radius: 0.4rem;
     background: #eee;
@@ -15,7 +15,7 @@
   input:hover {
     outline: none;
     background: #fff;
-    box-shadow: 0 0 0 3px #fea;
+    box-shadow: 0 0 0 3px rgba(46, 71, 125, 0.517);
   }
 
   p{

@@ -17,13 +17,16 @@ export function Header(){
       </Link>
 
       {data? (
-        <Link to={'/istadog/Conta'}>
-          <button>
-            {data.nome}
-            <User size={25} weight="bold" />
-          </button>
+        <>
+          <Link to={'/istadog/Conta'}>
+            <button>
+              {data.nome}
+              <User size={25} weight="bold" />
+            </button>
+            
+          </Link>
           <button onClick={userLogout}>Sair</button>
-        </Link>
+        </>
         
       ) : (
         <Link to={'/istadog/Loguin'}>

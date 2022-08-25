@@ -3,17 +3,19 @@
   cursor: pointer;
   border: none;
   border-radius: 0.4rem;
-  background: #ffbb11;
-  color: #764701;
+  background: #114dff;
+  color: #ececec;
   min-width: 8rem;
   padding: 0.8rem 1.2rem;
   transition: 0.3s;
+  font-weight: 700;
+  
 }
 
 .GlobalsButton:hover,
 .GlobalsButton:focus {
   outline: none;
-  box-shadow: 0 0 0 3px #fea, 0 0 0 4px #fb1;
+  box-shadow: 0 0 0 3px #5f8de9ce, 0 0 0 4px #000e79;
 
 }
 
