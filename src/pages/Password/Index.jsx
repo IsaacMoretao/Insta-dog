@@ -16,7 +16,6 @@ export function Password(){
 
   return(
     <>
-      <Header/>
       <main className='Password'>
 
         <div className='Left'/>

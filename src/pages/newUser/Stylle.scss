@@ -1,0 +1,25 @@
+.newUser{
+  display: flex;
+
+  div{
+    flex: 1;
+  }
+  .Left {
+    background: url('../../assets/DogFromPassword.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    width: 50vh;
+
+  }
+  .Right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div{
+      width: 450px;
+    }
+    
+  }
+
+}

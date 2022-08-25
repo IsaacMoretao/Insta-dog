@@ -1,0 +1,20 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #000;
+  margin-top: auto;
+  font-weight: 700;
+  padding: 10px;
+  background: #fff0;
+  position: absolute;
+  width: 100%;
+
+  a{
+    color: #000;
+    text-decoration: none;
+    font-family: Arial;
+    
+  }
+
+}

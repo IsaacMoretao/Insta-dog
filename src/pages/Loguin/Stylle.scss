@@ -4,7 +4,7 @@
   align-items: center;
   width: 100%;
 
-  figure{
+  .figure{
     display: flex;
     background: url('../../assets/ImageFromLogin.jpg') no-repeat center center;
     background-size: cover;
@@ -12,4 +12,5 @@
     height: 120vh;
 
   }
+  
 }

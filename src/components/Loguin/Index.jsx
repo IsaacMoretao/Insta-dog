@@ -1,11 +1,16 @@
 import React from 'react';
 import { useForm } from '../../Hooks/useForm';
 import { Input } from '../subComponents/Input/Index';
+
 import { Button } from '../subComponents/Button/Index';
 import { UserContext } from '../../useContext';
 import LoginImg from '../../assets/LoguinImg.png'
+
 import './Stylle.scss';
 import { Link } from 'react-router-dom';
+import { Error } from '../Helper/Error';
+
+
 
 export function Loguins(){
   const username = useForm();
@@ -26,7 +31,7 @@ export function Loguins(){
     <div className='Loguins'>
       
       <form onSubmit={handleSubmit}>
-        <span>  Login <b>Login</b> <b>Login</b></span>
+        <span className='Title'><figure/> Login </span>
         <Input
           label={'Usuário'}
           type={'password'}
@@ -46,7 +51,7 @@ export function Loguins(){
         ):(
           <Button>Enviar</Button>
         )}
-        {error && <p>{error}</p>}
+        <Error error={error} />
       </form>
       <div className='subForm'>
         <Link to={'/istadog/Loguin'}>Perdeu a senha?</Link>
@@ -59,7 +64,7 @@ export function Loguins(){
 
         
         <Link
-          to={'/istadog/Loguin/Senha'}
+          to={'/istadog/Loguin/novoUsuario'}
           className='GlobalsButton'
           style={{width: '80px'}}
         >
