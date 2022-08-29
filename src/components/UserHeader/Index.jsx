@@ -11,15 +11,15 @@ export function UserHeader(){
       </strong>
       <nav>
       
-        <Link to={'/istadog/Conta'} >
+        <Link to={'/istadog/Conta/Grade'} >
           <SquaresFour size={32} />
         </Link>
 
-        <Link to={'/istadog/Conta'}>
+        <Link to={'/istadog/Conta/Estatisticas'}>
           <ChartBar size={32} />
         </Link>
 
-        <Link to={'/istadog/Conta'}>
+        <Link to={'/istadog/Conta/novoPost'}>
           <Plus size={32} />
         </Link>
 
