@@ -1,31 +1,33 @@
-import './Stylle.scss'
-import { Link } from 'react-router-dom';
-import { SquaresFour, ChartBar, Plus,SignOut } from 'phosphor-react'
+import './Stylle.scss';
+import { NavLink } from 'react-router-dom';
+import { SquaresFour, ChartBar, Plus, SignOut } from 'phosphor-react';
 export function UserHeader(){
 
   return(
 
     <header className='UserHeader'>
+
       <strong className='Title'>
         <figure/>Minha conta
       </strong>
+
       <nav>
       
-        <Link to={'/istadog/Conta/Grade'} >
+        <NavLink to='/istadog/Gread' >
           <SquaresFour size={32} />
-        </Link>
+        </NavLink>
 
-        <Link to={'/istadog/Conta/Estatisticas'}>
+        <NavLink to='/istadog/Statics'>
           <ChartBar size={32} />
-        </Link>
+        </NavLink>
 
-        <Link to={'/istadog/Conta/novoPost'}>
+        <NavLink to='/istadog/novoPost'>
           <Plus size={32} />
-        </Link>
+        </NavLink>
 
-        <Link to={'/istadog/Conta'}>
+        <button >
           <SignOut size={32} />
-        </Link>
+        </button>
 
       </nav>
     </header>

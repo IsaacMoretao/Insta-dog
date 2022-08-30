@@ -9,11 +9,13 @@ import { NewCount } from './pages/newUser/Index'
 import { Conta } from './pages/Cont/Index';
 //import { ProectedRouter } from './components/Helper/ProectedRouter';
 
+
 function Rotas() {
   return (
     /*========== Rotas Para login ==========*/
         
       <Routes>
+
         <Route path="/istadog/" element={<Home />} />
         <Route path="/istadog/Loguin" element={<Loguin />} />
         <Route path="/istadog/Loguin/novoUsuario" element={<NewCount/>} />

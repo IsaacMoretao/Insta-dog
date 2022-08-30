@@ -11,13 +11,17 @@ import { Header } from './components/Header/Index';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+
   <React.StrictMode>
     <BrowserRouter>
       <UserStorage>
+        
         <Header/>
         <App />
         <Footer/>
+
       </UserStorage>
     </BrowserRouter>
   </React.StrictMode>
+
 )

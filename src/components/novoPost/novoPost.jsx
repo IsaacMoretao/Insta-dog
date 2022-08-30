@@ -1,4 +1,4 @@
-
+import { UserHeader } from '../UserHeader';
 export function newPost() {
 
   return(
