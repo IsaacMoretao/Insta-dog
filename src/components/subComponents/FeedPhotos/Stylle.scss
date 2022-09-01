@@ -1,0 +1,22 @@
+.FeedPhotos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+  justify-items: center;
+  
+}
+
+.FeedPhotosItem {
+  width: 33.3333%;
+  display: flex;
+
+  img {
+    width: 100%;
+  }
+
+  img:nth-child(2) {
+    grid-column: 2 / 4;
+    grid-row: span 2;
+  }
+}

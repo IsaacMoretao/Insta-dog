@@ -10,7 +10,7 @@ export function Header(){
   const { data } = React.useContext(UserContext);
 
   return(
-    <header className='Header'>
+    <header className='Header Container'>
 
       <Link to={'/istadog/'}>
         <img src="" alt="Img-Logo" />

@@ -3,8 +3,17 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+
   margin-bottom: 2rem;
   padding: 0px 50px;
+  min-height: 80vh;
+  margin-top: 50px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
 
 }
 

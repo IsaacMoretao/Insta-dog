@@ -1,7 +1,6 @@
 import './Stylle.scss';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { useEffect } from 'react';
 
 import { SquaresFour, ChartBar, Plus, SignOut } from 'phosphor-react';
 import { UserContext } from '../../useContext';
@@ -29,7 +28,7 @@ export function UserHeader(){
 
   return(
 
-    <header className='UserHeader'>
+    <header className='UserHeader Container'>
 
       <strong className='Title'>
         <figure/>{title}

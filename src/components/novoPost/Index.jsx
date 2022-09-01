@@ -53,7 +53,7 @@ export function Novopost() {
   }
 
   return (
-    <section className='photoPost'>
+    <section className='photoPost Container'>
 
       <form onSubmit={handleSubmit}>
 

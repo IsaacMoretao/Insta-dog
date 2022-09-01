@@ -22,7 +22,7 @@ function Rotas() {
         <Route path="/istadog/Loguin/novoUsuario" element={<NewCount/>} />
         <Route path="/istadog/Conta" element={<><UserHeader/><Conta/></>} />
 
-        <Route path="/istadog/Conta/Gread" element={<><UserHeader/><novoPost/></>} />
+        <Route path="/istadog/Conta/Gread" element={<><UserHeader/><Home /></>} />
         <Route path="/istadog/Conta/Statics" element={<><UserHeader/><h1>Hello</h1></>} />
         <Route path="/istadog/Conta/novoPost" element={<><UserHeader/><Novopost/></>} />
 

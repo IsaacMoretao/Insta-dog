@@ -31,3 +31,23 @@ body{
   }
 
 }
+
+.Container{
+  padding: 0px 15%;
+}
+
+@media (max-width: 999px){
+  .Container{
+    padding: 0px 10%;
+  }
+}
+@media (max-width: 750px){
+  .Container{
+    padding: 0px 5%;
+  }
+}
+@media (max-width: 550px){
+  .Container{
+    padding: 0px 3%;
+  }
+}
