@@ -1,25 +1,21 @@
+import React from 'react';
 import { UserHeader } from './../../components/UserHeader/Index';
-import { Routes, Route } from 'react-router-dom';
-import { Greads } from '../../components/Greads/Index';
+import { Route, Routes } from "react-router-dom";
 
-import { Estatistics } from '../../components/Estatistics/Index';
+//import { Greads } from '../../components/Greads/Index';
 //import { newPost } from '../../components';
 
-export function Conta(){
+export const Conta = () => {
 
   return(
 
-    <>
+    <div>
 
-      <UserHeader/>
-      <Routes>
-        <Route path="/istadog/Gread" element={<Greads/>} />
-        <Route path="/istadog/Statics" element={<Estatistics/>} />
-        <Route path="/istadog/novoPost" element={<h1>yuguiygyu</h1>} />
-      </Routes>
+    
 
-    </>
+    </div>
 
   )
 
 }
+

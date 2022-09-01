@@ -7,7 +7,7 @@ import { UserContext } from '../../useContext';
 
 export function Header(){
 
-  const { data, userLogout } = React.useContext(UserContext);
+  const { data } = React.useContext(UserContext);
 
   return(
     <header className='Header'>
@@ -25,7 +25,6 @@ export function Header(){
             </button>
             
           </Link>
-          <button onClick={userLogout}>Sair</button>
         </>
         
       ) : (
