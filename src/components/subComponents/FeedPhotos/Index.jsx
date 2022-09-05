@@ -8,7 +8,8 @@ import { Error } from '../../Helper/Error';
 
 import { Loading } from '../../Helper/Loading';
 
-export function FeedPhotos() {
+
+export function FeedPhotos({setModalPhoto}) {
   const { data, loading, error, request } = useFetch();
 
   React.useEffect(() => {
@@ -26,7 +27,11 @@ export function FeedPhotos() {
   return(
     <ul className='FeedPhotos'>
       {data.map((photo) => (
-        <FeedPhotosItem key={photo.id} photo={photo} />
+        <FeedPhotosItem
+          key={photo.id}
+          setModalPhoto={setModalPhoto}
+          photo={photo}
+        />
       ))}
     </ul>
   );

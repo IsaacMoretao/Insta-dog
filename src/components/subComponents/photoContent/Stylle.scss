@@ -1,0 +1,109 @@
+.PhotoContent{
+  background: #4545451a;
+  backdrop-filter: blur( 10px );
+  -webkit-backdrop-filter: blur( 10px );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+
+  left: 0;
+  top: 0;
+  z-index: 30;
+
+  main{
+    height: 80vh;
+    width: 80%;
+    background: #fff;
+
+    display: flex;
+    padding: 5px;
+    border-radius: 10px;
+
+    figure{
+      display: flex;
+      height: 100%;
+      flex: 2;
+
+      
+
+      img{
+        height: 100%;
+        border-radius: 10px;
+
+      }
+
+    }
+
+    aside{
+      display: flex;
+      flex: 2;
+      justify-content: space-around;
+
+    }
+
+  }
+  
+}
+
+.Aside{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  header{
+    display: flex;
+    justify-content: flex-end;
+
+    button{
+      display: flex;
+      border-radius: 1000vh;
+      justify-content: center;
+
+      align-items: center;
+      border: none;
+      background: #ff000000;
+
+      transition: 0.3s;
+      padding: 3px;
+      margin: 5px 5px 0px 0px;
+
+    }
+
+    button:hover {
+      background: #c8c8c8;
+      cursor: pointer;
+      
+    }
+
+  }
+
+
+  p{
+    display: flex;
+    justify-content: space-around;
+
+  }
+
+  h1{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+
+    gap: 30px;
+    font-weight: 700;
+    font-family: 25px;
+
+  }
+
+}

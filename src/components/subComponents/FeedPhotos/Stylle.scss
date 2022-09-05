@@ -2,21 +2,58 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+
   margin-bottom: 1rem;
   justify-items: center;
   
 }
 
 .FeedPhotosItem {
-  width: 33.3333%;
+  width: 100%;
   display: flex;
+  flex-direction: column;
 
-  img {
-    width: 100%;
+  .Image {
+    max-width: 100%;
+    display: flex;
+
+    border-radius: 0.2rem;
+    overflow: hidden;
+    cursor: pointer;
+
+    grid-area: 1 / 1;
+    
   }
 
-  img:nth-child(2) {
-    grid-column: 2 / 4;
-    grid-row: span 2;
+  .Image:hover ~ span {
+    opacity: 1;
   }
+
+  span{
+    display: flex;
+    background: rgba(0, 0, 0, 0.3);
+    gap: 10px;
+
+    position: absolute;
+    padding: 10px;
+    font-weight: 700;
+
+    color: #fff;
+    border-radius: 0px 0px 10px 0px ;
+    opacity: 0;
+    transition: 0.3s;
+    
+  }
+
+  span:hover {
+    opacity: 1;
+    
+  }
+ 
+}
+
+.FeedPhotosItem:nth-child(2) {
+  grid-column: 2 / 4;
+  grid-row: span 2;
+
 }
