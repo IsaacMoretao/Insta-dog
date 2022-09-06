@@ -82,7 +82,19 @@
     }
 
   }
+  .ButtonDelete{
+    padding: 5px 10px;
+    border-radius: 555px;
+    background: #c8c8c800;
+    cursor: pointer;
+    border: 1px solid #000;
 
+  }
+  .ButtonDelete:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #5f8de9ce, 0 0 0 4px #000e79;
+
+  }
 
   p{
     display: flex;
@@ -93,6 +105,7 @@
   h1{
     margin-left: auto;
     margin-right: auto;
+
   }
 
   ul{

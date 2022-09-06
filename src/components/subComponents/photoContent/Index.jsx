@@ -1,16 +1,26 @@
 import './Stylle.scss';
 import React from "react";
 import { Link } from 'react-router-dom';
+
 import { X }  from 'phosphor-react';
 import { Coments } from './../Coments/Index';
+import { UserContext } from '../../../useContext';
+import { PHOTO_DELETE } from '../../../api';
+import useFetch from '../../../Hooks/useFetch';
 
 export function PhotoContent({ data, setModalPhoto }) {
-
+  const { loading, request } = useFetch();
+  const user = React.useContext(UserContext);
   const {photo, comments } = data;
 
   function handleOutsideClick() {
     setModalPhoto(null);
 
+  }
+  async function handleClick() {
+    const { url, options } = PHOTO_DELETE(photo.id);
+    const { response } = await request(url, options);
+    if (response.ok) window.location.reload();
   }
 
   return(
@@ -33,7 +43,15 @@ export function PhotoContent({ data, setModalPhoto }) {
             </header>
 
             <p>
-              <Link to={`/perfil/${photo.author}`}>@{photo.author}</Link>
+              {user.data && user.data.username === photo.author ? (
+                <button className='ButtonDelete' onClick={handleClick} id={photo.id}>Deletar</button>
+
+
+              ) : (
+                <Link to={`/perfil/${photo.author}`}>@{photo.author}</Link>
+
+              ) }
+              
               <span>{photo.acessos}</span>
             </p>
 
@@ -48,7 +66,7 @@ export function PhotoContent({ data, setModalPhoto }) {
               <li>| {photo.idade} anos</li>
             </ul>
 
-            <Coments setModalPhoto={setModalPhoto}/>
+            <Coments id={photo.id} comments={comments} />
 
           </div>
         </aside>

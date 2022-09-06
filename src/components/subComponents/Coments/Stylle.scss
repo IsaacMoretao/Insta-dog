@@ -1,0 +1,49 @@
+.Coments{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 100%;
+  padding: 30px 10px 30px 10px;
+  overflow-y: auto;
+
+  ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    span{
+      word-break: word-break;
+    }
+   
+  }
+  
+}
+
+.formComents{
+  display: flex;
+  margin-top: auto;
+  bottom: 0;
+
+  textarea{
+    padding: 5px 10px 5px 10px;
+    width: calc(100% - 60px);
+    background: #f5f5f5;
+
+    border: none;
+    font-size: 20px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #000a5761;
+
+  }
+
+  button{
+    border: none;
+    background: #f5f5f500;
+    margin-left: 10px;
+    cursor: pointer;
+
+  }
+
+}
