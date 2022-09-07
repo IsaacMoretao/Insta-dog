@@ -3,7 +3,7 @@ import React from 'react';
 import { FeedModal } from "../subComponents/FeedModal/Index";
 import { FeedPhotos } from "../subComponents/FeedPhotos/Index";
 
-export function Feed(){
+export function Feed({user}){
   const [modalPhoto, setModalPhoto] = React.useState(null)
 
   return(
@@ -11,7 +11,7 @@ export function Feed(){
     <div className='Feed Container'>
       {modalPhoto && <FeedModal photo={modalPhoto} setModalPhoto={setModalPhoto}/>}
       
-      <FeedPhotos setModalPhoto={setModalPhoto}/>
+      <FeedPhotos user={user} setModalPhoto={setModalPhoto}/>
     </div>
 
   )

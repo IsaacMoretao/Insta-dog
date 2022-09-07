@@ -7,6 +7,7 @@ import { Coments } from './../Coments/Index';
 import { UserContext } from '../../../useContext';
 import { PHOTO_DELETE } from '../../../api';
 import useFetch from '../../../Hooks/useFetch';
+import { Image } from './../../Helper/Image/Index';
 
 export function PhotoContent({ data, setModalPhoto }) {
   const { loading, request } = useFetch();
@@ -29,7 +30,7 @@ export function PhotoContent({ data, setModalPhoto }) {
       <main>
 
         <figure>
-          <img src={photo.src} alt={photo.title} />
+          <Image src={photo.src} alt={photo.title}/>
         </figure>
 
         <aside>
