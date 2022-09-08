@@ -6,8 +6,6 @@ import useFetch from '../../../Hooks/useFetch';
 import { COMMENT_POST } from '../../../api';
 import { Error } from './../../Helper/Error';
 
-
-
 export function Form({ id, setComments }) {
   const [comment, setComment] = React.useState('');
   const { request, error } = useFetch();
@@ -23,8 +21,6 @@ export function Form({ id, setComments }) {
     }
 
   }
-
-  
 
   return(
     <>
@@ -42,5 +38,7 @@ export function Form({ id, setComments }) {
         <Error error={error} />
       </form>
     </>
+
   )
+  
 }

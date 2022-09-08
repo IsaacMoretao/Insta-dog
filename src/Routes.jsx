@@ -9,9 +9,12 @@ import { NewCount } from './pages/newUser/Index';
 import { Conta } from './pages/Cont/Index'
 //import { ProectedRouter } from './components/Helper/ProectedRouter';
 import { UserHeader } from './components/UserHeader/Index';
+import { UserContext } from './useContext';
 
 
 function Rotas() {
+
+
   return (
     /*========== Rotas Para login ==========*/
         

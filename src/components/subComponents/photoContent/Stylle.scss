@@ -27,9 +27,7 @@
     figure{
       display: flex;
       height: 100%;
-      flex: 2;
-
-      
+      flex: 2;  
 
       img{
         height: 93.5%;
@@ -48,6 +46,45 @@
 
   }
   
+}
+
+
+@media (max-width: 999px){
+  .Container{
+    padding: 0px 10%;
+  }
+}
+@media (max-width: 850px){
+
+  .PhotoContent{
+    main{
+      flex-direction: column;
+      height: 95vh;
+      overflow-y: scroll;
+
+      figure{
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        flex: 2;  
+  
+        img{
+          width: 300px;
+          border-radius: 10px;
+          
+        }
+
+      }
+
+    }
+    
+  }
+
+}
+@media (max-width: 550px){
+  .Container{
+    padding: 0px 3%;
+  }
 }
 
 .Aside{
@@ -92,13 +129,21 @@
   }
   .ButtonDelete:focus {
     outline: none;
-    box-shadow: 0 0 0 3px #5f8de9ce, 0 0 0 4px #000e79;
+    box-shadow:
+    0 0 0 3px #5f8de9ce,
+    0 0 0 4px #000e79;
 
   }
 
   p{
     display: flex;
     justify-content: space-around;
+
+    span{
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
 
   }
 

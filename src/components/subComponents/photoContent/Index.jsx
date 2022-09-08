@@ -2,12 +2,15 @@ import './Stylle.scss';
 import React from "react";
 import { Link } from 'react-router-dom';
 
-import { X }  from 'phosphor-react';
+import { X, Eye }  from 'phosphor-react';
 import { Coments } from './../Coments/Index';
 import { UserContext } from '../../../useContext';
+
 import { PHOTO_DELETE } from '../../../api';
 import useFetch from '../../../Hooks/useFetch';
 import { Image } from './../../Helper/Image/Index';
+
+
 
 export function PhotoContent({ data, setModalPhoto }) {
   const { loading, request } = useFetch();
@@ -53,7 +56,7 @@ export function PhotoContent({ data, setModalPhoto }) {
 
               ) }
               
-              <span>{photo.acessos}</span>
+              <span><Eye size={25} />{photo.acessos}</span>
             </p>
 
             <h1 className='Title'><figure style={{zIndex: '10'}}/>

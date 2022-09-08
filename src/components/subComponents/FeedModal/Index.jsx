@@ -1,8 +1,7 @@
-import './Stylle.scss';
 import React from 'react';
 import useFetch from './../../../Hooks/useFetch';
-
 import { PHOTO_GET } from '../../../api';
+
 import { Error } from '../../Helper/Error';
 import { Loading } from '../../Helper/Loading';
 import { PhotoContent } from '../../subComponents/photoContent/Index'
