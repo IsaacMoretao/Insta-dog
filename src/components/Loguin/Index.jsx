@@ -1,37 +1,35 @@
-import React from 'react';
-import { useForm } from '../../Hooks/useForm';
-import { Input } from '../subComponents/Input/Index';
+import React from 'react'
+import { useForm } from '../../Hooks/useForm'
+import { Input } from '../subComponents/Input/Index'
 
-import { Button } from '../subComponents/Button/Index';
-import { UserContext } from '../../useContext';
+import { Button } from '../subComponents/Button/Index'
+import { UserContext } from '../../useContext'
 import LoginImg from '../../assets/LoguinImg.png'
 
-import './Stylle.scss';
-import { Link } from 'react-router-dom';
-import { Error } from '../Helper/Error';
+import './Stylle.scss'
+import { Link } from 'react-router-dom'
+import { Error } from '../Helper/Error'
 
+export function Loguins() {
+  const username = useForm()
+  const password = useForm()
 
-
-export function Loguins(){
-  const username = useForm();
-  const password = useForm();
-
-  const { userLogin, error, loading } = React.useContext(UserContext);
+  const { userLogin, error, loading } = React.useContext(UserContext)
 
   async function handleSubmit(event) {
-    event.preventDefault();
+    event.preventDefault()
 
     if (username.validate() && password.validate()) {
-      userLogin(username.value, password.value);
+      userLogin(username.value, password.value)
     }
   }
 
-  return(
-
-    <div className='Loguins'>
-      
+  return (
+    <div className="Loguins">
       <form onSubmit={handleSubmit}>
-        <span className='Title'><figure/> Login </span>
+        <span className="Title">
+          <figure /> Login{' '}
+        </span>
         <Input
           label={'Usuário'}
           type={'password'}
@@ -48,32 +46,27 @@ export function Loguins(){
 
         {loading ? (
           <Button disabled>Carregando...</Button>
-        ):(
+        ) : (
           <Button>Enviar</Button>
         )}
         <Error error={error} />
       </form>
-      <div className='subForm'>
-        <Link to={'/istadog/Loguin/restaurar_senha'}>Perdeu a senha?</Link>
+      <div className="subForm">
+        <Link to={'/Insta-dog/Loguin/restaurar_senha'}>Perdeu a senha?</Link>
         <span>
-          <div/>Cadastre-se
+          <div />
+          Cadastre-se
         </span>
-        <p>
-          Ainda não possui conta? Cadastre-se no site.
-        </p>
+        <p>Ainda não possui conta? Cadastre-se no site.</p>
 
-        
         <Link
-          to={'/istadog/Loguin/novoUsuario'}
-          className='GlobalsButton'
-          style={{width: '80px'}}
+          to={'/Insta-dog/Loguin/novoUsuario'}
+          className="GlobalsButton"
+          style={{ width: '80px' }}
         >
-
-          Cadastro
+          Cadas/Insta-dog/
         </Link>
       </div>
-      
-
     </div>
   )
 }
