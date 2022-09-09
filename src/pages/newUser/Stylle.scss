@@ -23,3 +23,27 @@
   }
 
 }
+
+@media (max-width: 999px){
+  .newUser{
+    .Right{
+
+      main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 250px;
+        height: 100vh;
+      }
+
+    }
+
+  }
+
+}
+
+@media (max-width: 750px){
+  .Left {
+    display: none;
+  }
+}

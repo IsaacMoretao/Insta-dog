@@ -1,6 +1,8 @@
 import './Stylle.scss';
 import React from 'react'
 import { User } from 'phosphor-react';
+
+import Logo from '../../assets/dogs.svg'
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../useContext';
 
@@ -13,7 +15,7 @@ export function Header(){
     <header className='Header Container'>
 
       <Link to={'/istadog/'}>
-        <img src="" alt="Img-Logo" />
+        <img src={Logo} alt="Img-Logo" />
       </Link>
 
       {data? (

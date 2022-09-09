@@ -32,7 +32,7 @@ export function UserHeader(){
     const { pathname } = location;
     switch (pathname) {
       case '/istadog/Conta/novoPost':
-        setTitle('Poste Sua Foto');
+        setTitle('Novo Post');
         break;
       case '/istadog/Conta/Statics':
         setTitle('Estatísticas');

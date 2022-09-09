@@ -7,9 +7,11 @@ import { Novopost } from './components/novoPost/Index.jsx';
 import { NewCount } from './pages/newUser/Index';
 
 import { Conta } from './pages/Cont/Index'
-//import { ProectedRouter } from './components/Helper/ProectedRouter';
+import ProectedRouter from './components/Helper/ProectedRouter';
 import { UserHeader } from './components/UserHeader/Index';
-import { UserContext } from './useContext';
+import { LoginPassword } from './pages/LoginPassword/Index';
+
+
 
 
 function Rotas() {
@@ -22,12 +24,13 @@ function Rotas() {
 
         <Route path="/istadog/" element={<Home />} />
         <Route path="/istadog/Loguin" element={<Loguin />} />
+        <Route path="/istadog/Loguin/restaurar_senha" element={<LoginPassword/>} />
         <Route path="/istadog/Loguin/novoUsuario" element={<NewCount/>} />
-        <Route path="/istadog/Conta" element={<><UserHeader/><Conta/></>} />
+        <Route path="/istadog/Conta" element={<ProectedRouter><UserHeader/><Conta/></ProectedRouter>} />
 
-        <Route path="/istadog/Conta/Gread" element={<><UserHeader/><Home /></>} />
-        <Route path="/istadog/Conta/Statics" element={<><UserHeader/><h1>Hello</h1></>} />
-        <Route path="/istadog/Conta/novoPost" element={<><UserHeader/><Novopost/></>} />
+        <Route path="/istadog/Conta/Gread" element={<ProectedRouter><UserHeader/><Home /></ProectedRouter>} />
+        <Route path="/istadog/Conta/Statics" element={<ProectedRouter><UserHeader/><h1>Em Breve</h1></ProectedRouter>} />
+        <Route path="/istadog/Conta/novoPost" element={<ProectedRouter><UserHeader/><Novopost/></ProectedRouter>} />
 
       </Routes>
 

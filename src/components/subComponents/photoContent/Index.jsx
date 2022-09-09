@@ -52,7 +52,8 @@ export function PhotoContent({ data, setModalPhoto }) {
 
 
               ) : (
-                <Link to={`/perfil/${photo.author}`}>@{photo.author}</Link>
+                //<Link to={`/perfil/${photo.author}`}>@{photo.author}</Link>
+                <a href="#">@{photo.author}</a>
 
               ) }
               

@@ -5,6 +5,11 @@
 
   form {
     margin-bottom: 50px;
+    width: 450px;
+
+    Input{
+      width: 450px;
+    }
 
     span {
       width: 150px;
@@ -25,6 +30,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 450px;
 
   span {
     font-size: 35px;
@@ -36,20 +42,18 @@
       height: 8px;
       width: 50px;
       background: #00208277;
-
       position: absolute;
+
       margin-top: 35px;
       z-index: -1;
-
       border-radius: 90px;
+
     }
 
   }
   
 
 }
-
-
 
 @keyframes Animation {
 
@@ -63,6 +67,40 @@
     padding-left: 10%;
     padding-right: 10%;
 
+  }
+
+}
+
+@media (max-width: 999px){
+  .Loguins {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+}
+
+@media (max-width: 550px){
+  .subForm {
+    width: 250px;
+
+  }
+  .Loguins {
+    gap: 50px;
+    margin: 50px 0px;
+
+    form{
+      width: 250px;
+
+      Input{
+        width: 250px;
+
+      }
+
+    }
+    
   }
 
 }

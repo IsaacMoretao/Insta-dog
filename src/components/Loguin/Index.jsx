@@ -54,7 +54,7 @@ export function Loguins(){
         <Error error={error} />
       </form>
       <div className='subForm'>
-        <Link to={'/istadog/Loguin'}>Perdeu a senha?</Link>
+        <Link to={'/istadog/Loguin/restaurar_senha'}>Perdeu a senha?</Link>
         <span>
           <div/>Cadastre-se
         </span>

@@ -27,10 +27,12 @@ a{
   font-family: 'fantasy';
 
   figure {
+    min-height: 25px;
+    min-width: 25px;
     max-height: 25px;
-    width: 25px;
-    background: #000a5761;
+    max-width: 25px;
 
+    background: #000a5761;
     position: absolute;
     margin-top: 20px;
     border-radius: 3px;

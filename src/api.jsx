@@ -112,7 +112,7 @@ export function COMMENT_POST(id, body) {
 
 }
 
-export function PHOTO_DELETE( id ) { //
+export function PHOTO_DELETE( id ) { 
 
   return {
     url: `${API_URL}/api/photo/${id}`,
@@ -129,7 +129,6 @@ export function PHOTO_DELETE( id ) { //
 
 }
 
-
 export function USER_POST(body) {
 
   return {
@@ -139,6 +138,32 @@ export function USER_POST(body) {
       headers: {
         'Content-Type': 'application/json',
         
+      },
+      body: JSON.stringify(body),
+    },
+  };
+}
+
+export function PASSWORD_LOST(body) {
+  return {
+    url: API_URL + '/api/password/lost',
+    options: {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    },
+  };
+}
+
+export function PASSWORD_RESET(body) {
+  return {
+    url: API_URL + '/api/password/reset',
+    options: {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(body),
     },
