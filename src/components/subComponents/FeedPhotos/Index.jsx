@@ -30,6 +30,7 @@ export function FeedPhotos({ page, user, setModalPhoto, setInfinite }) {
     <ul className='FeedPhotos'>
       {data.map((photo) => (
         <FeedPhotosItem
+          user={user}
           key={photo.id}
           setModalPhoto={setModalPhoto}
           photo={photo}

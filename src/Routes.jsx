@@ -9,7 +9,10 @@ import { NewCount } from './pages/newUser/Index'
 import { Conta } from './pages/Cont/Index'
 import ProectedRouter from './components/Helper/ProectedRouter'
 import { UserHeader } from './components/UserHeader/Index'
+
 import { LoginPassword } from './pages/LoginPassword/Index'
+import UserCont from './pages/userCont/Index'
+import MinhaConta from './pages/MinhaConta/Index'
 
 function Rotas() {
   return (
@@ -17,13 +20,16 @@ function Rotas() {
 
     <Routes>
       <Route path="/Insta-dog/" element={<Home />} />
-      <Route path="/Insta-dog/Loguin" element={<Loguin />} />
+      <Route path="/Insta-dog/Login" element={<Loguin />} />
       <Route
-        path="/Insta-dog/Loguin/restaurar_senha"
+        path="/Insta-dog/Login/restaurar_senha"
         element={<LoginPassword />}
       />
-      <Route path="/Insta-dog/Loguin/novoUsuario" element={<NewCount />} />
-      <Route path="/Insta-dog/Conta"
+      <Route path="/Insta-dog/Login/novoUsuario" element={<NewCount />} />
+      <Route path="/Insta-dog/Conta/perfil/:user" element={<UserCont />} />
+
+      <Route
+        path="/Insta-dog/Conta"
         element={
           <ProectedRouter>
             <UserHeader />
@@ -32,7 +38,8 @@ function Rotas() {
         }
       />
 
-      <Route path="/Insta-dog/Conta/Gread"
+      <Route
+        path="/Insta-dog/Conta/Gread"
         element={
           <ProectedRouter>
             <UserHeader />
@@ -40,19 +47,23 @@ function Rotas() {
           </ProectedRouter>
         }
       />
-      <Route path="/Insta-dog/Conta/Statics"
-        element={
-          <ProectedRouter>
-            <UserHeader />
-            <h1>Em Breve</h1>
-          </ProectedRouter>
-        }
-      />
-      <Route path="/Insta-dog/Conta/novoPost"
+
+      <Route
+        path="/Insta-dog/Conta/novoPost"
         element={
           <ProectedRouter>
             <UserHeader />
             <Novopost />
+          </ProectedRouter>
+        }
+      />
+
+      <Route
+        path="/Insta-dog/Conta/MinhaConta"
+        element={
+          <ProectedRouter>
+            <UserHeader />
+            <MinhaConta />
           </ProectedRouter>
         }
       />

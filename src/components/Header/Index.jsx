@@ -17,7 +17,7 @@ export function Header() {
 
       {data ? (
         <>
-          <Link to={'/Insta-dog/Conta'}>
+          <Link to={'/Insta-dog/Conta/MinhaConta'}>
             <button>
               {data.nome}
               <User size={25} weight="bold" />
@@ -25,7 +25,7 @@ export function Header() {
           </Link>
         </>
       ) : (
-        <Link to={'/Insta-dog/Loguin'}>
+        <Link to={'/Insta-dog/Login'}>
           <button>
             Login/Criar
             <User size={25} weight="bold" />

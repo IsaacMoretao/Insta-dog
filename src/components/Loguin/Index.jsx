@@ -52,7 +52,7 @@ export function Loguins() {
         <Error error={error} />
       </form>
       <div className="subForm">
-        <Link to={'/Insta-dog/Loguin/restaurar_senha'}>Perdeu a senha?</Link>
+        <Link to={'/Insta-dog/Login/restaurar_senha'}>Perdeu a senha?</Link>
         <span>
           <div />
           Cadastre-se
@@ -60,11 +60,11 @@ export function Loguins() {
         <p>Ainda não possui conta? Cadastre-se no site.</p>
 
         <Link
-          to={'/Insta-dog/Loguin/novoUsuario'}
+          to={'/Insta-dog/Login/novoUsuario'}
           className="GlobalsButton"
           style={{ width: '80px' }}
         >
-          Cadas/Insta-dog/
+          Entrar
         </Link>
       </div>
     </div>

@@ -48,12 +48,18 @@ export function PhotoContent({ data, setModalPhoto }) {
 
             <p>
               {user.data && user.data.username === photo.author ? (
-                <button className='ButtonDelete' onClick={handleClick} id={photo.id}>Deletar</button>
-
+                <button
+                  className='ButtonDelete'
+                  onClick={handleClick}
+                  id={photo.id}>
+                    Deletar
+                </button>
 
               ) : (
-                //<Link to={`/perfil/${photo.author}`}>@{photo.author}</Link>
-                <a href="#">@{photo.author}</a>
+                <Link
+                  to={`/Insta-dog/Conta/perfil/${photo.author}`}>
+                    @{photo.author}
+                </Link>
 
               ) }
               

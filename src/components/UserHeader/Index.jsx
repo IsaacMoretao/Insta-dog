@@ -8,7 +8,7 @@ import {
   Plus,
   SignOut,
   Layout,
-  DotsNine
+  House
 } from 'phosphor-react'
 import { UserContext } from '../../useContext'
 import { useLocation } from 'react-router-dom'
@@ -36,11 +36,14 @@ export function UserHeader() {
       case '/Insta-dog/Conta/novoPost':
         setTitle('Novo Post')
         break
-      case '/Insta-dog/Conta/Statics':
-        setTitle('Estatísticas')
+      case '/Insta-dog/Conta/Gread':
+        setTitle('Grade')
+        break
+      case '/Insta-dog/Conta/MinhaConta':
+        setTitle('Minha Conta')
         break
       default:
-        setTitle('Minha Conta')
+        setTitle('Undfined')
     }
   }, [location])
 
@@ -57,8 +60,8 @@ export function UserHeader() {
             <Layout size={32} />
           </NavLink>
 
-          <NavLink to="/Insta-dog/Conta/Statics">
-            <ChartBar size={32} />
+          <NavLink to="/Insta-dog/Conta/MinhaConta">
+            <House size={32} />
           </NavLink>
 
           <NavLink to="/Insta-dog/Conta/novoPost">

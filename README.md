@@ -5,9 +5,8 @@
 <img src='./src/assets/Site.png' />
 
 <p align="center">
-<b>(Em andamento)</b> <br />
 Esse é um projeto clone, os estilos e a Api vem do curso completo de reactJS feito pela<br /> Origamid, nesse projeto é usado: Scss | phosphor-icons | React router dom | hooks | APIs<br /> 
-entre outros para ver mais <a href='https://isaacmoretao.github.io/TeslaSite/' target='_blank'> Clique Aqui</a>
+entre outros para ver mais <a href='https://isaacmoretao.github.io/Insta-dog/' target='_blank'> Clique Aqui</a>
 </p>
 
 <br/><br/>
