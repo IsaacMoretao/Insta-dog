@@ -153,8 +153,11 @@ export function PASSWORD_LOST(body) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(body),
+
     },
+
   };
+
 }
 
 export function PASSWORD_RESET(body) {
@@ -166,6 +169,9 @@ export function PASSWORD_RESET(body) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(body),
+
     },
+
   };
+  
 }

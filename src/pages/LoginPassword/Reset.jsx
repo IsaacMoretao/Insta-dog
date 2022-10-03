@@ -1,11 +1,11 @@
 import React from 'react';
 import { useForm } from '../../Hooks/useForm';
 import useFetch from '../../Hooks/useFetch';
-import { Navigate } from 'react-router-dom'
+import { Navigate } from 'react-router-dom';
 
 import { Button } from '../../components/subComponents/Button/Index';
 import { Input } from '../../components/subComponents/Input/Index';
-import { PASSWORD_RESET } from '../../api'
+import { PASSWORD_RESET } from '../../api';
 import { Error } from '../../components/Helper/Error';
 
 export function Reset(){

@@ -1,5 +1,4 @@
-import './Stylle.scss'
-import { Header } from "../../components/Header";
+import './Stylle.scss';
 import { Input } from './../../components/subComponents/Input/Index';
 import { Button } from './../../components/subComponents/Button/Index';
 import { useForm } from '../../Hooks/useForm';

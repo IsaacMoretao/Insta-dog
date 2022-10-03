@@ -1,22 +1,21 @@
-import React from 'react'
-import { Route, Routes } from 'react-router-dom'
-import { Home } from './pages/Home/index'
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { Home } from './pages/Home/index';
 
-import { Loguin } from './pages/Loguin/Index'
-import { Novopost } from './components/novoPost/Index.jsx'
-import { NewCount } from './pages/newUser/Index'
+import { Loguin } from './pages/Loguin/Index';
+import { Novopost } from './components/novoPost/Index.jsx';
+import { NewCount } from './pages/newUser/Index';
 
-import { Conta } from './pages/Cont/Index'
-import ProectedRouter from './components/Helper/ProectedRouter'
-import { UserHeader } from './components/UserHeader/Index'
+import { Conta } from './pages/Cont/Index';
+import ProectedRouter from './components/Helper/ProectedRouter';
+import { UserHeader } from './components/UserHeader/Index';
 
-import { LoginPassword } from './pages/LoginPassword/Index'
-import UserCont from './pages/userCont/Index'
-import MinhaConta from './pages/MinhaConta/Index'
+import { LoginPassword } from './pages/LoginPassword/Index';
+import UserCont from './pages/userCont/Index';
+import MinhaConta from './pages/MinhaConta/Index';
 
 function Rotas() {
   return (
-    /*========== Rotas Para login ==========*/
 
     <Routes>
       <Route path="/Insta-dog/" element={<Home />} />
@@ -69,7 +68,6 @@ function Rotas() {
       />
     </Routes>
 
-    /*========== Rotas Para Usuario logado ==========*/
   )
 }
 

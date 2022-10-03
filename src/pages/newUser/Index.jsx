@@ -6,7 +6,6 @@ import { Button } from './../../components/subComponents/Button/Index';
 import { USER_POST } from '../../api';
 import { useForm } from '../../Hooks/useForm';
 
-import { Header } from './../../components/Header/Index';
 import { UserContext } from '../../useContext';
 import { Error } from '../../components/Helper/Error';
 import useFetch from './../../Hooks/useFetch';

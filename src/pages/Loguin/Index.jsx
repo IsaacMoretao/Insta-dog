@@ -1,8 +1,8 @@
-import React from 'react'
-import { Loguins } from '../../components/Loguin/Index'
-import { UserContext } from '../../useContext'
-import { useNavigate } from 'react-router-dom'
-import './Stylle.scss'
+import React from 'react';
+import { Loguins } from '../../components/Loguin/Index';
+import { UserContext } from '../../useContext';
+import { useNavigate } from 'react-router-dom';
+import './Stylle.scss';
 
 export function Loguin() {
   const { login } = React.useContext(UserContext)
